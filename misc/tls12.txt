@@ -1,0 +1,4 @@
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /f /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /reg:64  
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /f /v SystemDefaultTlsVersions /t REG_DWORD /d 1 /reg:32  
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /f /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64  
+reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /f /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32

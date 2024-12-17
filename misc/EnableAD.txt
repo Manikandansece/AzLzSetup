@@ -1,0 +1,2 @@
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+Install-ADDSForest -DomainName "yourdomain.local" -DomainNetbiosName "YOURDOMAIN" -ForestMode "Win2016" -DomainMode "Win2016" -InstallDNS -SafeModeAdministratorPassword (ConvertTo-SecureString "YourSafeModePassword" -AsPlainText -Force) -Force
