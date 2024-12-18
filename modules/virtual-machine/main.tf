@@ -1,6 +1,9 @@
 variable "prefix" {
   default = "azw-dc-001"
 }
+variable "iamsubnet_id" {
+  type = string
+}
 
 resource "azurerm_network_interface" "main" {
   name                = "nic-${var.prefix}"
@@ -9,7 +12,7 @@ resource "azurerm_network_interface" "main" {
 
   ip_configuration {
     name                          = "ipconfig"
-    subnet_id                     = "/subscriptions/4704282e-9375-4a08-bfa9-2101ed40b8dc/resourceGroups/rg-Connectivity/providers/Microsoft.Network/virtualNetworks/vnet-landingzone/subnets/iam-subnet"
+    subnet_id                     = var.iamsubnet_id
     private_ip_address_allocation = "Dynamic"
   }
 }

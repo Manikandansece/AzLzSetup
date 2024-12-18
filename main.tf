@@ -31,10 +31,20 @@ module "resource_group" {
   source = "./modules/resource-group"  
 }
 
+
 module "virtual_network" {
   source = "./modules/virtual-network"
+
 }
 
 module "virtual_machine" {
   source = "./modules/virtual-machine"
+
+  iamsubnet_id = module.virtual_network.iamsubnet_id
+}
+
+module "vm_endpoint" {
+  source = "./modules/vm-endpoint"
+  
+  appsubnet_id = module.virtual_network.appsubnet_id
 }
