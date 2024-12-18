@@ -8,7 +8,7 @@ terraform {
   }
 backend "azurerm" {
       resource_group_name  = "rg_automation_tf"
-      storage_account_name = "stgcloudshellparentco"
+      storage_account_name = "tfstateciabparentco"
       container_name       = "tfstate"
       key                  = "terraform.tfstate"
   }
